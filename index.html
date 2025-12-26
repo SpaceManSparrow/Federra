@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federa | Portable Equity for Newcastle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'federa-base': '#1A1110', // Deep charcoal with a hint of #3F1E2F
+                        'federa-plum': '#3F1E2F',
+                        'federa-orange': '#F38357',
+                        'federa-ochre': '#CC5221',
+                        'federa-gold': '#F1A15E',
+                        'federa-moss': '#6F6534',
+                        'federa-teal': '#365365'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Lexend', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow { box-shadow: 0 0 20px rgba(243, 131, 87, 0.2); }
+        .gradient-bg {
+            background: radial-gradient(circle at 10% 20%, rgba(63, 30, 47, 0.4) 0%, rgba(26, 17, 16, 1) 90%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(241, 161, 94, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-federa-base text-stone-200 font-sans gradient-bg min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 border-b border-white/5 bg-federa-base/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-federa-orange rounded-xl rotate-3 flex items-center justify-center shadow-lg shadow-federa-orange/20">
+                    <span class="text-federa-base font-extrabold text-xl">F</span>
+                </div>
+                <span class="font-display font-extrabold text-2xl tracking-tight text-white italic">federa</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest text-stone-400">
+                <a href="#logic" class="hover:text-federa-gold transition">The Logic</a>
+                <a href="#ecosystem" class="hover:text-federa-gold transition">Ecosystem</a>
+            </div>
+            <a href="#waitlist" class="bg-white text-federa-base px-6 py-2 rounded-full font-extrabold hover:bg-federa-gold transition-all duration-300">
+                JOIN PILOT
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-40 pb-20 px-6 overflow-hidden">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-20 left-1/4 w-96 h-96 bg-federa-plum/30 rounded-full blur-[120px] -z-10"></div>
+        <div class="absolute bottom-10 right-1/4 w-64 h-64 bg-federa-ochre/10 rounded-full blur-[100px] -z-10"></div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="inline-flex items-center space-x-2 bg-federa-plum text-federa-gold px-4 py-2 rounded-full text-xs font-bold mb-8 border border-federa-gold/20">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-federa-gold opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-federa-gold"></span>
+                    </span>
+                    <span>NEWCASTLE PILOT: 50 SLOTS REMAINING</span>
+                </div>
+                <h1 class="font-display text-6xl lg:text-8xl font-extrabold text-white leading-[0.9] mb-8">
+                    Home ownership. <br>
+                    <span class="text-federa-orange">Liquid at last.</span>
+                </h1>
+                <p class="text-xl text-stone-400 mb-10 leading-relaxed max-w-lg">
+                    The Australian dream is stuck in the mud. We've decoupled the home from the land. Own a <span class="text-white font-bold">$60k Socius unit</span> and move it across our interstate grid.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#waitlist" class="bg-federa-orange text-white px-10 py-5 rounded-2xl text-xl font-extrabold hover:scale-105 transition-transform shadow-2xl shadow-federa-orange/20 text-center">
+                        Secure your spot
+                    </a>
+                    <div class="flex flex-col justify-center px-4">
+                        <span class="text-federa-gold font-bold">Newcastle Site A</span>
+                        <span class="text-xs text-stone-500 uppercase tracking-widest">Planned Launch Q4 2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="aspect-square bg-gradient-to-br from-federa-plum to-federa-base rounded-[40px] border border-white/10 p-4 shadow-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1512918766671-ed6a9980a659?auto=format&fit=crop&q=80&w=1000" 
+                         class="w-full h-full object-cover rounded-[32px] grayscale hover:grayscale-0 transition duration-700 opacity-60 hover:opacity-100" 
+                         alt="Modular Unit">
+                </div>
+                <!-- Float Card -->
+                <div class="absolute -bottom-10 -right-6 glass-card p-8 rounded-3xl shadow-2xl border-l-4 border-l-federa-orange max-w-xs">
+                    <p class="font-display text-3xl font-bold text-white mb-1">$60k</p>
+                    <p class="text-federa-gold text-sm font-bold uppercase tracking-tighter">Socius Gen-1 Unit</p>
+                    <div class="mt-4 h-[1px] w-full bg-white/10"></div>
+                    <p class="mt-4 text-xs text-stone-400">Precision engineered. Built for the Australian climate. Moveable in 48 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sociological Theory Section -->
+    <section id="logic" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-display text-4xl md:text-5xl font-extrabold text-white mb-8 italic">Social capital shouldn't evaporate when you cross a border.</h2>
+            <p class="text-xl text-stone-400 leading-relaxed">
+                Current housing models rely on <span class="text-federa-ochre">extractive capital</span>—tethering your wealth to land you don't control. Federa is a "Sociological Stack": a democratic federation that ensures you keep your home, your community, and your equity, whether you're in Newcastle or Sydney.
+            </p>
+        </div>
+    </section>
+
+    <!-- The 3-Tier Grid -->
+    <section id="ecosystem" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
+            <!-- Unit 1 -->
+            <div class="glass-card p-10 rounded-[32px] hover:border-federa-gold/40 transition group">
+                <div class="w-14 h-14 bg-federa-teal/30 rounded-2xl flex items-center justify-center mb-8 border border-federa-teal/50 group-hover:bg-federa-teal/50 transition">
+                    <i class="fa-solid fa-cube text-federa-gold text-2xl"></i>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-white mb-4 italic">Socius Development</h3>
+                <p class="text-stone-400 text-sm leading-relaxed mb-6">The Hardware. We manufacture the units for a flat $60k. No developer margins. No luxury markups. Just high-performance housing.</p>
+                <span class="text-federa-gold font-bold text-xs uppercase tracking-widest">Build the Engine &rarr;</span>
+            </div>
+
+            <!-- Unit 2 -->
+            <div class="bg-federa-plum/40 p-10 rounded-[32px] border-2 border-federa-orange shadow-2xl shadow-federa-orange/5 relative group">
+                <div class="w-14 h-14 bg-federa-orange rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-federa-orange/30">
+                    <i class="fa-solid fa-shield-cat text-federa-base text-2xl"></i>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-white mb-4 italic">Federa Group</h3>
+                <p class="text-stone-300 text-sm leading-relaxed mb-6">The Guardian. A non-profit entity that protects the land from being sold out. It ensures the "Interstate Grid" remains resident-owned forever.</p>
+                <span class="text-federa-orange font-bold text-xs uppercase tracking-widest">Protect the Mission &rarr;</span>
+            </div>
+
+            <!-- Unit 3 -->
+            <div class="glass-card p-10 rounded-[32px] hover:border-federa-gold/40 transition group">
+                <div class="w-14 h-14 bg-federa-moss/30 rounded-2xl flex items-center justify-center mb-8 border border-federa-moss/50 group-hover:bg-federa-moss/50 transition">
+                    <i class="fa-solid fa-earth-oceania text-federa-gold text-2xl"></i>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-white mb-4 italic">Federa Communities</h3>
+                <p class="text-stone-400 text-sm leading-relaxed mb-6">The Home. Clustered grid sites with shared infrastructure. Democratic governance by the people who actually live there.</p>
+                <span class="text-federa-gold font-bold text-xs uppercase tracking-widest">Join the Site &rarr;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Newcastle Validation Form -->
+    <section id="waitlist" class="py-32 px-6">
+        <div class="max-w-3xl mx-auto bg-white rounded-[40px] p-12 text-federa-base shadow-2xl relative overflow-hidden">
+            <!-- Decorative Australian "Sun" Gradient -->
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-federa-gold/20 rounded-full blur-3xl"></div>
+            
+            <div class="relative z-10 text-center">
+                <h2 class="font-display text-5xl font-extrabold mb-6 tracking-tighter">Join the Newcastle Grid.</h2>
+                <p class="text-lg text-stone-600 mb-10 font-medium leading-relaxed">
+                    We are currently surveying residents for our first Newcastle-based site. Join the waitlist to demonstrate demand and secure your unit manufacturing slot.
+                </p>
+
+                <form class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Your Name" class="w-full px-6 py-4 rounded-2xl bg-stone-100 border-none focus:ring-2 focus:ring-federa-orange transition">
+                        <input type="email" placeholder="Email Address" class="w-full px-6 py-4 rounded-2xl bg-stone-100 border-none focus:ring-2 focus:ring-federa-orange transition">
+                    </div>
+                    <select class="w-full px-6 py-4 rounded-2xl bg-stone-100 border-none focus:ring-2 focus:ring-federa-orange transition appearance-none font-semibold text-stone-500">
+                        <option>Interested in Newcastle Site A</option>
+                        <option>Interested in Future Sydney Sites</option>
+                        <option>Landowner Partnership</option>
+                    </select>
+                    <button class="w-full bg-federa-base text-white py-6 rounded-2xl text-2xl font-extrabold hover:bg-federa-plum transition shadow-xl">
+                        REGISTER INTEREST
+                    </button>
+                </form>
+                <p class="mt-6 text-[10px] text-stone-400 uppercase tracking-[0.2em] font-bold">
+                    Property of the People. Managed by the Federa Non-Profit Group.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 mb-8 md:mb-0">
+                <div class="w-8 h-8 bg-federa-teal rounded flex items-center justify-center">
+                    <span class="text-white font-bold text-xs italic">f</span>
+                </div>
+                <span class="font-display font-extrabold text-white italic">federa</span>
+            </div>
+            <div class="flex space-x-12 text-stone-500 text-xs font-bold uppercase tracking-widest">
+                <a href="#" class="hover:text-federa-gold transition">The Manifesto</a>
+                <a href="#" class="hover:text-federa-gold transition">Open Source Specs</a>
+                <a href="#" class="hover:text-federa-gold transition">Newcastle 2024</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
