@@ -42,22 +42,28 @@
 </head>
 <body class="bg-federa-base text-stone-200 font-sans gradient-bg min-h-screen">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 border-b border-white/5 bg-federa-base/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-federa-orange rounded-xl rotate-3 flex items-center justify-center shadow-lg shadow-federa-orange/20">
-                    <span class="text-federa-base font-extrabold text-xl">F</span>
+<!-- Navigation -->
+    <nav class="fixed w-full z-50 border-b border-white/5 bg-federa-base/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <!-- Logo Container: shrink-0 prevents the logo from squishing -->
+            <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 bg-federa-orange rounded-xl rotate-3 flex items-center justify-center shadow-lg shadow-federa-orange/20">
+                    <span class="text-federa-base font-extrabold text-lg sm:text-xl">F</span>
                 </div>
-                <span class="font-display font-extrabold text-2xl tracking-tight text-white italic">federa</span>
+                <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-white italic">federa</span>
             </div>
+
+            <!-- Desktop Links: remain hidden on mobile -->
             <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest text-stone-400">
                 <a href="#logic" class="hover:text-federa-gold transition">The Logic</a>
                 <a href="#ecosystem" class="hover:text-federa-gold transition">Ecosystem</a>
                 <a href="#socials" class="hover:text-federa-gold transition">Socials</a>
             </div>
-            <a href="#waitlist" class="bg-white text-federa-base px-6 py-2 rounded-full font-extrabold hover:bg-federa-gold transition-all duration-300">
-                REGISTER INTEREST
+
+            <!-- CTA Button: Adaptive text sizing and padding -->
+            <a href="#waitlist" class="bg-white text-federa-base px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-extrabold text-[10px] sm:text-xs md:text-sm hover:bg-federa-gold transition-all duration-300 shrink-0 shadow-sm">
+                <span class="md:hidden">REGISTER</span>
+                <span class="hidden md:inline">REGISTER INTEREST</span>
             </a>
         </div>
     </nav>
@@ -237,6 +243,7 @@
                         <input type="email" placeholder="Email Address" class="w-full px-6 py-4 rounded-2xl bg-stone-100 border-none focus:ring-2 focus:ring-federa-orange transition">
                     </div>
                     <select class="w-full px-6 py-4 rounded-2xl bg-stone-100 border-none focus:ring-2 focus:ring-federa-orange transition appearance-none font-semibold text-stone-500">
+
                         <option>Interested in: Newcastle Site</option>
                         <option>Interested in: Future Sites</option>
                     </select>
