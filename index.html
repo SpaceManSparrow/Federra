@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+    <!-- Basic Metadata & Document Settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Federra | Portable Equity for the Community</title>
+
+    <!-- External Resources: Tailwind CSS, FontAwesome, and Google Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Configuration: Defining Brand Colors and Typography -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'federra-base': '#1A1110', // Deep charcoal with a hint of #3F1E2F
+                        'federra-base': '#1A1110',
                         'federra-plum': '#3F1E2F',
                         'federra-orange': '#F38357',
                         'federra-ochre': '#CC5221',
@@ -28,6 +33,8 @@
             }
         }
     </script>
+
+    <!-- Custom CSS: Specialized UI Effects -->
     <style>
         .glow { box-shadow: 0 0 20px rgba(243, 131, 87, 0.2); }
         .gradient-bg {
@@ -42,25 +49,27 @@
 </head>
 <body class="bg-federra-base text-stone-200 font-sans gradient-bg min-h-screen">
 
-<!-- Navigation -->
+    <!-- MAIN NAVIGATION: Sticky header with brand logo and core links -->
     <nav class="fixed w-full z-50 border-b border-white/5 bg-federra-base/90 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-            <!-- Logo Container: shrink-0 prevents the logo from squishing -->
-	<a href="https://spacemansparrow.github.io/Federra/" class="flex items-center space-x-2 md:space-x-3 group">
-		<div class="w-8 h-8 md:w-10 md:h-10 bg-federra-orange rounded-xl rotate-3 flex items-center justify-center shadow-lg shadow-federra-orange/20 transition-transform group-hover:rotate-0">
-			<span class="text-federra-base font-extrabold text-lg md:text-xl">F</span>
-		</div>
-		<span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-white italic group-hover:text-federra-gold transition-colors">federra</span>
-	</a>
 
-            <!-- Desktop Links: remain hidden on mobile -->
+            <!-- Brand Logo -->
+            <a href="https://spacemansparrow.github.io/Federra/" class="flex items-center space-x-2 md:space-x-3 group">
+                <div class="w-8 h-8 md:w-10 md:h-10 bg-federra-orange rounded-xl rotate-3 flex items-center justify-center shadow-lg shadow-federra-orange/20 transition-transform group-hover:rotate-0">
+                    <span class="text-federra-base font-extrabold text-lg md:text-xl">F</span>
+                </div>
+                <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-white italic group-hover:text-federra-gold transition-colors">federra</span>
+            </a>
+
+            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest text-stone-400">
                 <a href="#logic" class="hover:text-federra-gold transition">The Logic</a>
+                <a href="#model" class="hover:text-federra-gold transition">The Model</a>
                 <a href="#ecosystem" class="hover:text-federra-gold transition">Ecosystem</a>
-                <a href="#socials" class="hover:text-federra-gold transition">Socials</a>
+                <a href="#socials" class="hover:text-federra-gold transition">Community</a>
             </div>
 
-            <!-- CTA Button: Adaptive text sizing and padding -->
+            <!-- Global Call to Action -->
             <a href="#waitlist" class="bg-white text-federra-base px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-extrabold text-[10px] sm:text-xs md:text-sm hover:bg-federra-gold transition-all duration-300 shrink-0 shadow-sm">
                 <span class="md:hidden">REGISTER</span>
                 <span class="hidden md:inline">REGISTER INTEREST</span>
@@ -68,21 +77,25 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-40 pb-20 px-6 overflow-hidden">
-        <!-- Background Ambient Glow -->
+    <!-- HERO SECTION: Primary value proposition and introduction -->
+    <section id="home" class="relative pt-40 pb-20 px-6 overflow-hidden">
+
+        <!-- Decorative background blurs -->
         <div class="absolute top-20 left-1/4 w-96 h-96 bg-federra-plum/30 rounded-full blur-[120px] -z-10"></div>
         <div class="absolute bottom-10 right-1/4 w-64 h-64 bg-federra-ochre/10 rounded-full blur-[100px] -z-10"></div>
 
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Headline and Content -->
             <div>
                 <div class="inline-flex items-center space-x-2 bg-federra-plum text-federra-gold px-4 py-2 rounded-full text-xs font-bold mb-8 border border-federra-gold/20">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-federra-gold opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-federra-gold"></span>
                     </span>
-                    <span>PILOT: 50 UNIT SITE</span>
+                    <span>REPLACING MORTGAGE DEBT WITH PORTABLE EQUITY</span>
                 </div>
+
                 <h1 class="font-display text-6xl lg:text-8xl font-extrabold text-white leading-[0.9] mb-8">
                     Home ownership. <br>
                     <span class="text-federra-orange">Affordable at last.</span>
@@ -90,128 +103,166 @@
                 <p class="text-xl text-stone-400 mb-10 leading-relaxed max-w-lg">
                     The Australian dream is stuck in the mud. We've decoupled the home from the land. Own a <span class="text-white font-bold">40ft HC shipping container home</span> and move it across our interstate grid.
                 </p>
+
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                     <a href="#waitlist" class="bg-federra-orange text-white px-10 py-5 rounded-2xl text-xl font-extrabold hover:scale-105 transition-transform shadow-2xl shadow-federra-orange/20 text-center">
                         REGISTER INTEREST
                     </a>
-                    <div class="flex flex-col justify-center px-4">
-                        <span class="text-federra-gold font-bold">The Site</span>
-                        <span class="text-xs text-stone-500 uppercase tracking-widest">Planned Launch TBA</span>
-                    </div>
                 </div>
             </div>
-            <div class="relative">
-                <div class="aspect-square bg-gradient-to-br from-federra-plum to-federra-base rounded-[40px] border border-white/10 p-4 shadow-2xl overflow-hidden">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg"
-                         class="w-full h-full object-cover rounded-[32px] grayscale hover:grayscale-0 transition duration-700 opacity-60 hover:opacity-100"
-                         alt="Modular Unit">
+
+            <!-- "THE LOGIC" CARD: Explaining the philosophy behind the model -->
+            <div id="logic" class="relative">
+                <div class="glass-card p-10 lg:p-12 rounded-[40px] shadow-2xl border border-white/10 relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-48 h-48 bg-federra-ochre/20 rounded-full blur-3xl -z-10"></div>
+
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-white mb-6 italic">Why is housing so expensive?</h2>
+                    <div class="w-12 h-1 bg-federra-orange mb-6 rounded-full"></div>
+                    <p class="text-lg md:text-xl text-stone-400 leading-relaxed">
+                        The current housing market is designed to extract wealth, not build stability.
+                        Federra is a <span class="text-federra-ochre font-bold">democratic network</span> designed to protect you.
+                        <br><br>
+                        By decoupling the home from the land, we’ve created a way for you to build genuine equity without the mountain of debt.
+                    </p>
                 </div>
-                <!-- Float Card - UPDATED TO WHITE BACKGROUND -->
-                <div class="absolute -bottom-10 -right-6 bg-white p-8 rounded-3xl shadow-2xl border-l-4 border-l-federra-orange max-w-xs text-federra-base">
-                    <p class="font-display text-3xl font-bold text-federra-base mb-1">$40k - $80k</p>
-                    <p class="text-federra-ochre text-sm font-bold uppercase tracking-tighter">Marketplace Units</p>
-                    <div class="mt-4 h-[1px] w-full bg-federra-base/10"></div>
-                    <p class="mt-4 text-xs text-stone-600 font-medium">Choose your manufacturer. Own your asset. Plug into the Federra infrastructure.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- THE MODEL SECTION: Step-by-step breakdown of the system -->
+    <section id="model" class="py-20 px-6 bg-black/20 border-y border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-extrabold text-white mb-4 italic">How it works.</h2>
+                <p class="text-stone-400 max-w-xl mx-auto">A repeatable platform for portable housing equity.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Detailed steps -->
+                <div class="space-y-8">
+
+                    <div class="flex gap-4">
+                        <div class="text-federra-gold font-display text-2xl font-bold">01</div>
+                        <div>
+                            <h4 class="text-white font-bold text-xl mb-2">Standardised Modular Homes</h4>
+                            <p class="text-stone-400 text-sm leading-relaxed">Residents own a portable 40-foot high-cube container home. By using the global shipping container standard, Federra leverages an established manufacturing and logistics ecosystem.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="text-federra-gold font-display text-2xl font-bold">02</div>
+                        <div>
+                            <h4 class="text-white font-bold text-xl mb-2">Shared Infrastructure Grid</h4>
+                            <p class="text-stone-400 text-sm leading-relaxed">Federra sites provide the essential backbone, connecting every modular home safely to power, water, sewer, and high-speed internet via standard connections.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="text-federra-gold font-display text-2xl font-bold">03</div>
+                        <div>
+                            <h4 class="text-white font-bold text-xl mb-2">Mutual Land Ownership</h4>
+                            <p class="text-stone-400 text-sm leading-relaxed">The land is owned collectively through a member-owned mutual. Residents pay a recurring fee to cover operational costs, preventing speculation and stabilising long-term housing costs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portability Highlight -->
+                <div class="glass-card p-10 rounded-[32px] text-center">
+                    <i class="fa-solid fa-house-chimney-window text-6xl text-federra-teal mb-6"></i>
+                    <h3 class="font-display text-2xl font-bold text-white mb-4 italic">True Portability</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-6">
+                        Because homes are modular, residents can relocate their container home between compatible Federra sites or upgrade without losing housing equity. Even existing container homes that pass safety inspections can move into Federra sites immediately.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sociological Theory Section -->
-	<section id="logic" class="py-32 px-6">
-		<div class="max-w-4xl mx-auto text-center">
-			<h2 class="font-display text-4xl md:text-5xl font-extrabold text-white mb-8 italic">Why is housing so expensive?&nbsp;&nbsp;</h2>
-			<p class="text-xl text-stone-400 leading-relaxed">
-				The current housing market is designed to extract wealth, not build stability.
-				Federra is a <span class="text-federra-ochre">democratic network</span> designed to protect you.
-				By decoupling the home from the land, we’ve created a way for you to build genuine equity without the mountain of debt.
-			</p>
-	  </div>
-	</section>
-
-    <!-- The 3-Tier Grid - UPDATED TO BE UNIFIED -->
+    <!-- ECOSYSTEM SECTION: Core pillars of the platform (The Mutual, Infrastructure, Marketplace) -->
     <section id="ecosystem" class="py-20 px-6">
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
-            <div class="glass-card p-10 rounded-[32px] hover:border-federra-gold/40 transition group">
-                <div class="w-14 h-14 bg-federra-teal/30 rounded-2xl flex items-center justify-center mb-8 border border-federra-teal/50">
-                    <i class="fa-solid fa-store text-federra-gold text-2xl"></i>
-                </div>
-                <h3 class="font-display text-2xl font-bold text-white mb-4 italic">The Marketplace</h3>
-                <p class="text-stone-400 text-sm leading-relaxed mb-6">
-                  Ownership without the land-lock. Bring your own certified 40ft HC unit to the grid, or commission a new one from our network of vetted Australian manufacturers. You control the asset; we provide the infrastructure.
-              </p>
-                <span class="text-federra-gold font-bold text-xs uppercase tracking-widest">Browse Manufacturers &rarr;</span>
-            </div>
-            <div class="glass-card p-10 rounded-[32px] hover:border-federra-gold/40 transition group">
-                <div class="w-14 h-14 bg-federra-teal/30 rounded-2xl flex items-center justify-center mb-8 border border-federra-teal/50">
-                    <i class="fa-solid fa-layer-group text-federra-gold text-2xl"></i>
-                </div>
-                <h3 class="font-display text-2xl font-bold text-white mb-4 italic">The Stack</h3>
-                <p class="text-stone-400 text-sm leading-relaxed mb-6">
-                    The Federra Stack is a permanent steel skeleton that provides power, plumbing, and high-speed fiber. It’s the "hardware" that turns a container into a vertical community.
-                </p>
-                <span class="text-federra-gold font-bold text-xs uppercase tracking-widest">How the Grid Works &rarr;</span>
-            </div>
+
+            <!-- Pillar 1 -->
             <div class="glass-card p-10 rounded-[32px] hover:border-federra-gold/40 transition group">
                 <div class="w-14 h-14 bg-federra-teal/30 rounded-2xl flex items-center justify-center mb-8 border border-federra-teal/50">
                     <i class="fa-solid fa-handshake text-federra-gold text-2xl"></i>
                 </div>
-                <h3 class="font-display text-2xl font-bold text-white mb-4 italic">The Co-op</h3>
+                <h3 class="font-display text-2xl font-bold text-white mb-4 italic">The Mutual</h3>
                 <p class="text-stone-400 text-sm leading-relaxed mb-6">
-                    You don't just rent; you belong. The site is a member-owned co-operative. Vote on rules, manage the tools, and share in the collective security of a non-profit land lease.
+                    A land-lease platform where you pay a recurring site fee to access the land and shared infrastructure. This ensures site operational costs are met while granting you membership in a community built for long-term resilience.
                 </p>
-                <span class="text-federra-gold font-bold text-xs uppercase tracking-widest">Join the Co-op &rarr;</span>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="glass-card p-10 rounded-[32px] hover:border-federra-gold/40 transition group">
+                <div class="w-14 h-14 bg-federra-teal/30 rounded-2xl flex items-center justify-center mb-8 border border-federra-teal/50">
+                    <i class="fa-solid fa-plug text-federra-gold text-2xl"></i>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-white mb-4 italic">The Infrastructure</h3>
+                <p class="text-stone-400 text-sm leading-relaxed mb-6">
+                    Pay a one-time connection fee to plug your unit into the Federra infrastructure grid. Every site operates with highly standardised lot allocation for water, sewer, power, and internet, making community deployment scalable.
+                </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="glass-card p-10 rounded-[32px] hover:border-federra-gold/40 transition group">
+                <div class="w-14 h-14 bg-federra-teal/30 rounded-2xl flex items-center justify-center mb-8 border border-federra-teal/50">
+                    <i class="fa-solid fa-store text-federra-gold text-2xl"></i>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-white mb-4 italic">The Ecosystem</h3>
+                <p class="text-stone-400 text-sm leading-relaxed mb-6">
+                    Our vision includes a marketplace for compatible units and a certification program for manufacturers. Buy, sell, and relocate certified homes across our future network of interoperable sites.
+                </p>
             </div>
         </div>
     </section>
 
+    <!-- COMMUNITY SECTION: Social channel links and engagement -->
+<section id="socials" class="py-24 px-6 relative overflow-hidden">
 
-		<!-- Community / Stay Connected Section -->
-    <section id="socials" class="py-24 px-6 relative overflow-hidden">
-        <!-- Background elements for warmth -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-federra-teal/10 rounded-full blur-[120px] -z-10"></div>
 
         <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-16">
+
+            <div class="text-center mb-16">
                 <h2 class="font-display text-4xl md:text-5xl font-extrabold text-white mb-4 italic">Stay connected.</h2>
                 <p class="text-stone-400 max-w-xl mx-auto">Join the movement and help us build the first community.</p>
-          </div>
+            </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Discord Card -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
                 <div class="group relative glass-card p-1 bg-gradient-to-br from-federra-teal/20 to-transparent rounded-[32px] transition-all hover:scale-[1.01]">
-                    <div class="bg-federra-base/80 p-10 rounded-[28px] h-full flex flex-col items-start">
-                      <div class="flex justify-between w-full mb-8">
-                            <div class="w-16 h-16 bg-[#5865F2]/10 rounded-2xl flex items-center justify-center border border-[#5865F2]/20">
-                                <i class="fa-brands fa-discord text-[#5865F2] text-3xl"></i>
+                    <div class="bg-federra-base/80 p-8 rounded-[28px] h-full flex flex-col items-center text-center">
+
+                        <div class="flex flex-col items-center mb-6">
+                            <div class="w-20 h-20 bg-[#5865F2]/10 rounded-2xl flex items-center justify-center border border-[#5865F2]/20 mb-4">
+                                <i class="fa-brands fa-discord text-[#5865F2] text-4xl"></i>
                             </div>
-                            <span class="bg-federra-teal/20 text-federra-gold text-[10px] font-bold px-3 py-1 rounded-full border border-federra-teal/40 h-fit uppercase tracking-widest">✅ Live!</span>
+                            <span class="bg-federra-teal/20 text-federra-gold text-[10px] font-bold px-3 py-1 rounded-full border border-federra-teal/40 uppercase tracking-widest">✅ Live!</span>
                         </div>
-                        <h3 class="font-display text-3xl font-bold text-white mb-4">Discord</h3>
-                        <p class="text-stone-400 mb-8 leading-relaxed">
-                            This is where the democracy happens. Discuss site layouts for the site, vote on community rules, and chat directly with the founders and architects.
-                        </p>
-                        <a href="https://discord.gg/JayF6brHuQ" target="_blank" class="mt-auto inline-flex items-center space-x-3 bg-white text-federra-base px-8 py-4 rounded-2xl font-extrabold hover:bg-federra-gold transition-colors w-full md:w-auto justify-center">
+
+                        <h3 class="font-display text-2xl font-bold text-white mb-8">Discord</h3>
+
+                        <a href="https://discord.gg/JayF6brHuQ" target="_blank" class="w-full inline-flex items-center justify-center space-x-3 bg-white text-federra-base px-8 py-4 rounded-2xl font-extrabold hover:bg-federra-gold transition-colors">
                             <span>ENTER THE SERVER</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Instagram Card - UPDATED TO MATCH DISCORD THEME -->
                 <div class="group relative glass-card p-1 bg-gradient-to-br from-federra-teal/20 to-transparent rounded-[32px] transition-all hover:scale-[1.01]">
-                    <div class="bg-federra-base/80 p-10 rounded-[28px] h-full flex flex-col items-start">
-                      <div class="flex justify-between w-full mb-8">
-                            <div class="w-16 h-16 bg-gradient-to-tr from-[#F58529] to-[#DD2A7B] rounded-2xl flex items-center justify-center opacity-80 group-hover:opacity-100 transition">
-                                <i class="fa-brands fa-instagram text-white text-3xl"></i>
+                    <div class="bg-federra-base/80 p-8 rounded-[28px] h-full flex flex-col items-center text-center">
+
+                        <div class="flex flex-col items-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-tr from-[#F58529] to-[#DD2A7B] rounded-2xl flex items-center justify-center opacity-80 group-hover:opacity-100 transition mb-4">
+                                <i class="fa-brands fa-instagram text-white text-4xl"></i>
                             </div>
-                            <span class="bg-federra-teal/20 text-federra-gold text-[10px] font-bold px-3 py-1 rounded-full border border-federra-teal/40 h-fit uppercase tracking-widest">⚠️ Currently unavailable</span>
+                            <span class="bg-federra-teal/20 text-federra-gold text-[10px] font-bold px-3 py-1 rounded-full border border-federra-teal/40 uppercase tracking-widest">⚠️ Currently unavailable</span>
                         </div>
-                        <h3 class="font-display text-3xl font-bold text-white mb-4 italic">Instagram&nbsp;</h3>
-                        <p class="text-stone-400 mb-8 leading-relaxed">
-                            Follow the build process of the Socius Gen-1 units. From raw steel in the factory to the first residents moving into the site.
-                        </p>
-                        <a href="https://spacemansparrow.github.io/Federra" target="_blank" class="mt-auto inline-flex items-center space-x-3 bg-white text-federra-base px-8 py-4 rounded-2xl font-extrabold hover:bg-federra-gold transition-colors w-full md:w-auto justify-center">
+
+                        <h3 class="font-display text-2xl font-bold text-white mb-8 italic">Instagram</h3>
+
+                        <a href="https://spacemansparrow.github.io/Federra" target="_blank" class="w-full inline-flex items-center justify-center space-x-3 bg-white text-federra-base px-8 py-4 rounded-2xl font-extrabold hover:bg-federra-gold transition-colors">
                             <span>FOLLOW UPDATES</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </a>
@@ -220,89 +271,62 @@
             </div>
         </div>
     </section>
-	
-	<!-- Federra Survey Section -->
-	<section id="survey" class="py-32 px-6 border-t border-white/5">
-    <div class="max-w-5xl mx-auto text-center mb-16">
-        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-white mb-6 italic">
-          Australian Housing Survey
-      </h2>
-        <p class="text-stone-400 max-w-2xl mx-auto leading-relaxed">
-            We're gathering structured data to validate demand for the first Federra site.
-            This takes approximately 4–6 minutes to complete.
-        </p>
-    </div>
 
-    <div class="max-w-5xl mx-auto rounded-[32px] overflow-hidden shadow-2xl border border-white/10">
-        <div class="relative w-full" style="padding-top: 140%;">
-            <iframe 
-                src="https://docs.google.com/forms/d/e/1FAIpQLSeZwLqe8pWemOXZsTZi4euMyLLXfzcNQp36b9vUSEfl7XPWww/viewform?embedded=true"
-                class="absolute top-0 left-0 w-full h-full"
-                frameborder="0"
-                marginheight="0"
-                marginwidth="0">
-                Loading…
-            </iframe>
+    <!-- REGISTRATION SECTION: Lead capture form and waitlist -->
+<section id="waitlist" class="py-32 px-6 border-t border-white/5">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="font-display text-4xl md:text-5xl font-extrabold text-white mb-6 italic">
+              Join the movement.
+          </h2>
+            <p class="text-stone-400 max-w-2xl mx-auto leading-relaxed">
+                Leave your details to stay updated on our progress, pilot sites, and early opportunities.
+            </p>
         </div>
-		<div class="mt-8 text-center">
-<p class="text-[10px] text-stone-500 uppercase tracking-widest font-bold">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZwLqe8pWemOXZsTZi4euMyLLXfzcNQp36b9vUSEfl7XPWww/viewform" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       class="hover:text-federra-orange transition-colors">
-       Open survey in a new tab &rarr;
-    </a>
-</p>
+
+        <div class="max-w-3xl mx-auto rounded-[32px] overflow-hidden shadow-2xl border border-white/10 bg-transparent">
+
+            <div class="w-full h-[850px] sm:h-[700px] overflow-hidden">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSd4GRhgvp5sTgqquDqGUH2rT4f1zvDtONdGTZVdGOvCaPP_VQ/viewform?embedded=true"
+                    class="w-full h-full border-none"
+                    scrolling="no"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0">
+                    Loading…
+                </iframe>
             </div>
-    </div>
-	</section>
-	
-	    <!-- The Validation Form -->
-    <section id="waitlist" class="py-32 px-6">
-        <div class="max-w-3xl mx-auto bg-white rounded-[40px] p-12 text-federra-base shadow-2xl relative overflow-hidden">
-            <!-- Decorative Australian "Sun" Gradient -->
-            <div class="absolute -top-24 -right-24 w-64 h-64 bg-federra-gold/20 rounded-full blur-3xl"></div>
 
-            <div class="relative z-10 text-center">
-                <h2 class="font-display text-5xl font-extrabold mb-6 tracking-tighter">Ready to plug in?</h2>
-                <p class="text-lg text-stone-600 mb-10 font-medium leading-relaxed">
-                    We are currently surveying residents for our first Hunter-based site. Join the waitlist to demonstrate demand and secure your unit manufacturing slot.
-                </p>
-
-                <form class="space-y-4">
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <input type="text" placeholder="Your Name" class="w-full px-6 py-4 rounded-2xl bg-stone-100 border-none focus:ring-2 focus:ring-federra-orange transition">
-                        <input type="email" placeholder="Email Address" class="w-full px-6 py-4 rounded-2xl bg-stone-100 border-none focus:ring-2 focus:ring-federra-orange transition">
-                    </div>
-                    <select class="w-full px-6 py-4 rounded-2xl bg-stone-100 border-none focus:ring-2 focus:ring-federra-orange transition appearance-none font-semibold text-stone-500">
-
-                        <option>Interested in: Newcastle Site</option>
-                        <option>Interested in: Future Sites</option>
-                    </select>
-                    <button class="w-full bg-federra-base text-white py-6 rounded-2xl text-2xl font-extrabold hover:bg-federra-plum transition shadow-xl">
-                        REGISTER INTEREST
-                    </button>
-                </form>
-                <p class="mt-6 text-[10px] text-stone-400 uppercase tracking-[0.2em] font-bold">
-                    Property of the People. Managed by the Federra Non-Profit Group.
+            <div class="pb-8 text-center">
+                <p class="text-[10px] text-stone-500 uppercase tracking-widest font-bold">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4GRhgvp5sTgqquDqGUH2rT4f1zvDtONdGTZVdGOvCaPP_VQ/viewform"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="hover:text-federra-orange transition-colors">
+                       Open form in a new tab &rarr;
+                    </a>
                 </p>
             </div>
         </div>
     </section>
-	
-    <!-- Footer -->
+
+    <!-- FOOTER SECTION: Branding and secondary navigation links -->
     <footer class="py-20 px-6 border-t border-white/5">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+
+            <!-- Mini Logo -->
             <div class="flex items-center space-x-3 mb-8 md:mb-0">
-                <div class="w-8 h-8 bg-federra-teal rounded flex items-center justify-center">
-                    <span class="text-white font-bold text-xs italic">f</span>
+                <div class="w-8 h-8 bg-federra-orange rounded flex items-center justify-center">
+                    <span class="text-federra-base font-bold text-xs">F</span>
                 </div>
                 <span class="font-display font-extrabold text-white italic">federra</span>
             </div>
+
+            <!-- Footer Links -->
             <div class="flex space-x-12 text-stone-500 text-xs font-bold uppercase tracking-widest">
-                <a href="#" class="hover:text-federra-gold transition">The Manifesto</a>
-                <a href="#" class="hover:text-federra-gold transition">Open Source Specs</a>
-                <a href="#" class="hover:text-federra-gold transition">Text-here Site</a>
+                <a href="#" class="hover:text-federra-gold transition">Contact</a>
+                <a href="#" class="hover:text-federra-gold transition">LinkedIn</a>
+                <a href="#home" class="hover:text-federra-gold transition">Back to Top</a>
             </div>
         </div>
     </footer>
